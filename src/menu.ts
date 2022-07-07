@@ -40,14 +40,21 @@ export async function gestionarOpcion(
         await rlp.questionAsync('');    
     }
     else if(opcion === '5') {
-        console.log('Opción 5');    
+        console.clear();
+        await teatro.cancelarLocalidad(rlp)
+        await rlp.questionAsync('');
     }
     else if(opcion === '6') {
-        console.log('Opción 6');    
+        console.clear();
+        await teatro.consultarLocalidad(rlp);
+        await rlp.questionAsync('');  
     }
     else if(opcion === '7') {
-        console.log('Opción 7');    
-    }
+        console.clear();
+        await teatro.CalcularRecaudacon(rlp);
+        await rlp.questionAsync(''); 
+    }   
+
     else if(opcion === '8') {
         console.log('Opción 8');    
     }
